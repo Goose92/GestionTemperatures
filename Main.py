@@ -17,6 +17,7 @@ import random
 import urllib
 
 import VariablesConfig
+import ModuleGestionConnexion
 
 from firebase import firebase
 
@@ -50,17 +51,6 @@ def read_temp():
         temp_c = float(temp_string) / 100.0
         return int(temp_c)
 
-# Fonction pour verifier si acces internet ok
-def InternetOk():
-    try :
-        url = "https://www.google.com"
-        urllib.urlopen(url)
-        status = "Connected"
-        return True
-    except :
-        status = "Not connect"
-        return False
-    # print status
 
 def AjouterItemBuffer(Item) :
     TableauBuffer.append(Item)
