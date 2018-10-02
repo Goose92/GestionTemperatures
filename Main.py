@@ -13,7 +13,7 @@ from GestionSonde import read_temp
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
-Interval=60  # Temps en seconde entre chaque verification
+Interval=10  # Temps en seconde entre chaque verification
 
 def InternetOk():
     try :
