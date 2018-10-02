@@ -16,8 +16,8 @@ import datetime
 import random
 import urllib
 
-import VariablesConfig
-import ModuleGestionConnexion
+import ModuleGestionConnexion # Import des fonctions permettant de tester la connexion internet
+from VariablesConfig import CompteFirebase # Import du fichier de config
 
 from firebase import firebase
 
