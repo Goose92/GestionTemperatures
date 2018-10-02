@@ -16,7 +16,7 @@ os.system('modprobe w1-therm')
 # Debut du programme principal
 
 if len(sys.argv) == 2 : # Il faut qu'il y ait un argument et un seul (le num pour firebase)
-# TODO : Rajouter le fonctionnement avec un 2ème argument pour Prod (boucle infinie) ou Test (1 repetition)
+# TODO : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition)
 	Chaine=sys.argv[1]
 	if Chaine.isdigit() :
    		x = int(Chaine)
