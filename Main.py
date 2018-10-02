@@ -26,8 +26,8 @@ if len(sys.argv) == 2 :
     # A faire : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition) + un 3eme pour l'interval
 	Chaine=sys.argv[1]
     if Chaine.isdigit() :
-   		x = int(Chaine)
-    	print(Chaine,"Lancement de l'application correct (un seul argument)")
+        x = int(Chaine)
+        print(Chaine,"Lancement de l'application correct (un seul argument)")
         # On rentre dans la boucle infinie
         firebase = firebase.FirebaseApplication(CompteFirebase,None)
         Cpt=0
@@ -52,4 +52,4 @@ if len(sys.argv) == 2 :
     else :
         print(Chaine,"Echec : Il faut un argument numerique pour indiquer le numero de la sonde")
 else :
-	print("Echec : Il faut un argument numerique et un seul pour indiquer le numero de la sonde")
+    print("Echec : Il faut un argument numerique et un seul pour indiquer le numero de la sonde")
