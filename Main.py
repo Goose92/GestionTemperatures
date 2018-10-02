@@ -3,7 +3,7 @@ import os,sys,glob,time,datetime,random,urllib
 from firebase import firebase
 
 # Import des modules particuliers internes au programme
-# from ModuleGestionConnexion import InternetOk # Import des fonctions permettant de tester la connexion internet
+from ModuleGestionConnexion import InternetOk # Import des fonctions permettant de tester la connexion internet
 from VariablesConfig import CompteFirebase # Import du fichier de config (pour les variables)
 import GestionSonde # Import du module de gestion de la sonde Dallas
 from GestionBuffer import TableauBuffer, AjouterItemBuffer, SupprimerVieilleValeurBuffer, LirePlusVieilleValeurBuffer, ViderBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
@@ -15,17 +15,6 @@ os.system('modprobe w1-therm')
 
 Interval=10  # Temps en seconde entre chaque verification
 
-def InternetOk():
-    try :
-        url = "https://www.google.com"
-        urllib.urlopen(url)
-        status = "Connected"
-        print("Toto : Connected")
-        return True
-    except :
-        status = "Not connect"
-        print("Toto : Not Connected")
-        return False
 
 # ------------------------------------------------
 # Debut du programme principal
@@ -57,6 +46,6 @@ if len(sys.argv) == 2 : # Il faut qu'il y ait un argument et un seul (le num pou
             Cpt=Cpt +1
             time.sleep(Interval)
 	else :
-        	print(Chaine,"Echec : Il faut un argument numerique pour indiquer le numero de la sonde")
+        print(Chaine,"Echec : Il faut un argument numerique pour indiquer le numero de la sonde")
 else :
 	print("Echec : Il faut un argument numerique et un seul pour indiquer le numero de la sonde")
