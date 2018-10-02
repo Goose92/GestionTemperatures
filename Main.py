@@ -21,6 +21,9 @@ Interval=10  # Temps en seconde entre chaque verification
 if len(sys.argv) != 2 :
     print("Mauvais nombre d'arguments")
     exit()
+else :
+    print("gogogo")
+    
 # Il faut qu'il y ait un argument et un seul (le num pour firebase)
 if len(sys.argv) == 2 :
     # A faire : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition) + un 3eme pour l'interval
