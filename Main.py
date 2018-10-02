@@ -24,7 +24,7 @@ if len(sys.argv) == 2 : # Il faut qu'il y ait un argument et un seul (le num pou
         firebase = firebase.FirebaseApplication(CompteFirebase,None)
         Interval=60*60  # Temps en seconde entre chaque verification
         Cpt=0
-        while 1 == 1 :
+        while Cpt < 1 :
             ValTemp=read_temp() # On recupere la temperature actuelle
             Horodatage=datetime.datetime.now()
             if InternetOk()==True :   # On regarde si internet est up
