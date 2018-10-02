@@ -13,19 +13,19 @@ from GestionSonde import read_temp
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
+Interval=60  # Temps en seconde entre chaque verification
 
 # ------------------------------------------------
 # Debut du programme principal
 
 if len(sys.argv) == 2 : # Il faut qu'il y ait un argument et un seul (le num pour firebase)
-# TODO : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition)
+# TODO : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition) + un 3eme pour l'interval
 	Chaine=sys.argv[1]
 	if Chaine.isdigit() :
    		x = int(Chaine)
     	print(Chaine,"Lancement de l'application correct (un seul argument)")
         # On rentre dans la boucle infinie
         firebase = firebase.FirebaseApplication(CompteFirebase,None)
-        Interval=60*60  # Temps en seconde entre chaque verification
         Cpt=0
         while Cpt < 1 :
             ValTemp=read_temp() # On recupere la temperature actuelle
