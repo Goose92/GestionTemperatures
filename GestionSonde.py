@@ -4,8 +4,6 @@ base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
 
-TableauBuffer = [] # Creation du tableau qui sert de buffer si internert est off
-
 # Fonction pour lire le contenu du fichier des temperatures
 def read_temp_raw():
     f = open(device_file, 'r')

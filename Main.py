@@ -11,6 +11,7 @@ import GestionBuffer # Import du module de gestion du buffer (en cas de perte du
 # Initionalisation du systeme de gestion
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
+TableauBuffer = [] # Creation du tableau qui sert de buffer si internert est off
 
 # ------------------------------------------------
 # Debut du programme principal
