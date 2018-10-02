@@ -3,7 +3,7 @@ import os,sys,glob,time,datetime,random,urllib
 from firebase import firebase
 
 # Import des modules particuliers internes au programme
-import ModuleGestionConnexion # Import des fonctions permettant de tester la connexion internet
+from ModuleGestionConnexion import InternetOk # Import des fonctions permettant de tester la connexion internet
 from VariablesConfig import CompteFirebase # Import du fichier de config (pour les variables)
 import GestionSonde # Import du module de gestion de la sonde Dallas
 import GestionBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
