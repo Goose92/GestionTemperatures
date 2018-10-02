@@ -1,3 +1,4 @@
+import glob
 # Initialisation de la variable permettant de trouver le fichier ou est stocke la temperature via la sonde DALLAS
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
