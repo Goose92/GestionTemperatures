@@ -48,6 +48,7 @@ if len(sys.argv) == 2 : # Il faut qu'il y ait un argument et un seul (le num pou
                 print("Internet OFF",ValTemp,Horodatage)
             Cpt=Cpt +1
             time.sleep(Interval)
+        # Fin de boucle infinie
     else :
         print(Chaine,"Echec : Il faut un argument numerique pour indiquer le numero de la sonde")
 else :
