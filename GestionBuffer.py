@@ -1,3 +1,5 @@
+TableauBuffer = [] # Creation du tableau qui sert de buffer si internert est off
+
 def AjouterItemBuffer(Item) :
     TableauBuffer.append(Item)
 

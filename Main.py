@@ -6,13 +6,13 @@ from firebase import firebase
 from ModuleGestionConnexion import InternetOk # Import des fonctions permettant de tester la connexion internet
 from VariablesConfig import CompteFirebase # Import du fichier de config (pour les variables)
 import GestionSonde # Import du module de gestion de la sonde Dallas
-from GestionBuffer import AjouterItemBuffer, SupprimerVieilleValeurBuffer, LirePlusVieilleValeurBuffer, ViderBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
+from GestionBuffer import TableauBuffer, AjouterItemBuffer, SupprimerVieilleValeurBuffer, LirePlusVieilleValeurBuffer, ViderBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
 from GestionSonde import read_temp
 
 # Initionalisation du systeme de gestion
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
-TableauBuffer = [] # Creation du tableau qui sert de buffer si internert est off
+
 
 # ------------------------------------------------
 # Debut du programme principal
