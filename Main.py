@@ -1,38 +1,16 @@
-
-import os
-import sys
-import glob
-import time
-import datetime
-import random
-import urllib
-
-import ModuleGestionConnexion # Import des fonctions permettant de tester la connexion internet
-from VariablesConfig import CompteFirebase # Import du fichier de config
-import GestionSonde # Import du module de gestion de la sonde Dallas
+# Import des modules Python utilises dans le programme
+import os,sys,glob,time,datetime,random,urllib
 from firebase import firebase
+
+# Import des modules particuliers internes au programme
+import ModuleGestionConnexion # Import des fonctions permettant de tester la connexion internet
+from VariablesConfig import CompteFirebase # Import du fichier de config (pour les variables)
+import GestionSonde # Import du module de gestion de la sonde Dallas
+import GestionBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
 
 # Initionalisation du systeme de gestion
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
-
-
-
-def AjouterItemBuffer(Item) :
-    TableauBuffer.append(Item)
-
-def SupprimerVieilleValeurBuffer() :
-    del TableauBuffer[0]
-
-def LirePlusVieilleValeurBuffer() :
-    return TableauBuffer[0]
-
-def ViderBuffer() :
-    while len(TableauBuffer)>0 :
-      PlusVieilleValeur=LirePlusVieilleValeurBuffer()
-      print(PlusVieilleValeur)
-      # Mettre ici la fonction pour enregistrer ou je veux la valeur
-      del TableauBuffer[0]
 
 # ------------------------------------------------
 # Debut du programme principal
