@@ -7,6 +7,7 @@ import ModuleGestionConnexion # Import des fonctions permettant de tester la con
 from VariablesConfig import CompteFirebase # Import du fichier de config (pour les variables)
 import GestionSonde # Import du module de gestion de la sonde Dallas
 import GestionBuffer # Import du module de gestion du buffer (en cas de perte du reseau)
+from GestionSonde import read_temp
 
 # Initionalisation du systeme de gestion
 os.system('modprobe w1-gpio')
