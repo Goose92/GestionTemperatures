@@ -42,7 +42,7 @@ print("Lancement de l'application correct (parametres)")
 # On rentre dans la boucle infinie
 firebase = firebase.FirebaseApplication(CompteFirebase,None)
 Boucle=True
-Interval=60*ParamInterval  # Temps en seconde entre chaque verification
+Interval=60*int(ParamInterval)  # Temps en seconde entre chaque verification
 
 while Boucle == True  :
 	ValTemp=read_temp() # On recupere la temperature actuelle
