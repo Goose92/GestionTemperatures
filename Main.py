@@ -23,12 +23,24 @@ Interval=10  # Temps en seconde entre chaque verification
 if len(sys.argv) != 4 :
 	print("Il n'y a pas assez de parametre. Exemple d'utilisation : Python Main.py PROD 1 60")
 	exit(0)
+ParamTypeLancement=sys.argv[1]
+if ParamTypeLancement="PROD" or ParamTypeLancement!="TEST" :
+	print("Le premier parametre doit etre PROD pour un lancement avec boucle infinie ou TEST pour une seule iteration")
+	exit(0)
+ParamNumSondeFB=sys.argv[2]
+if ParamNumSondeFB.isdigit()==False :
+	print("Le second parametre doit etre un nombre indiquant le numero de la sonde dans firebase")
+	exit(0)
+ParamInterval=sys.argv[3]
+if ParamInterval.isdigit()==False :
+	print("Le Troisieme parametre doit etre un nombre indiquant le nombre de minute entre chaque releve")
+	exit(0)
 
-print("on continue")
+print("C'est bon, on continue",' / ',ParamTypeLancement,' / ', ParamNumSondeFB,' / ' , ParamInterval)
 
 if len(sys.argv) == 2 :
     # A faire : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition) + un 3eme pour l'interval
-    Chaine=sys.argv[1]
+    Chaine=sys.argv[2]
     if Chaine.isdigit() :
          x = int(Chaine)
          print(Chaine,"Lancement de l'application correct (un seul argument)")
