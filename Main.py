@@ -29,20 +29,21 @@ ParamTypeLancement=sys.argv[1]
 if ParamTypeLancement!="PROD" and ParamTypeLancement!="TEST" :
 	print("Le premier parametre doit etre PROD pour un lancement avec boucle infinie ou TEST pour une seule iteration")
 	exit(0)
-ParamNumSondeFB=sys.argv[2]
+
 if ParamNumSondeFB.isdigit()==False :
 	print("Le second parametre doit etre un nombre indiquant le numero de la sonde dans firebase")
 	exit(0)
 ParamInterval=sys.argv[3]
 if ParamInterval.isdigit()==False :
 	print("Le Troisieme parametre doit etre un nombre indiquant le nombre de minute entre chaque releve")
-	Interval=60*ParamInterval  # Temps en seconde entre chaque verification
 	exit(0)
 
 print("Lancement de l'application correct (parametres)")
 # On rentre dans la boucle infinie
 firebase = firebase.FirebaseApplication(CompteFirebase,None)
+ParamNumSondeFB=sys.argv[2]
 Boucle=True
+Interval=60*ParamInterval  # Temps en seconde entre chaque verification
 
 while Boucle == True  :
 	ValTemp=read_temp() # On recupere la temperature actuelle
