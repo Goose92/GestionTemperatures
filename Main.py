@@ -21,7 +21,8 @@ Interval=10  # Temps en seconde entre chaque verification
 
 # Il faut qu'il y ait 3 arguments (Prod/Test , NumeroSonde, NbMinIntervale)
 if len(sys.argv) != 4 :
-	exit
+	print("Il n'y a pas assez de parametre. Exemple d'utilisation : Python Main.py PROD 1 60")
+	exit(0)
 
 print("on continue")
 
