@@ -37,7 +37,7 @@ if ParamInterval.isdigit()==False :
 	print("Le Troisieme parametre doit etre un nombre indiquant le nombre de minute entre chaque releve")
 	exit(0)
 
-print("Lancement de l'application correct (parametres), début des cycles")
+print("Lancement de l'application correct (parametres), debut des cycles")
 firebase = firebase.FirebaseApplication(CompteFirebase,None)
 Boucle=True # Par defaut on est en boucle infinie, seule le parametre TEST peut faire passer a False
 Interval=60*int(ParamInterval)  # Temps en seconde entre chaque verification
