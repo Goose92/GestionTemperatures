@@ -19,12 +19,17 @@ Interval=10  # Temps en seconde entre chaque verification
 # Debut du programme principal
 # ------------------------------------------------
 
-# Il faut qu'il y ait un argument et un seul (le num pour firebase)
+# Il faut qu'il y ait 3 arguments (Prod/Test , NumeroSonde, NbMinIntervale)
+if len(sys.argv) != 4 :
+	exit
+
+print("on continue")
+
 if len(sys.argv) == 2 :
     # A faire : Rajouter le fonctionnement avec un 2eme argument pour Prod (boucle infinie) ou Test (1 repetition) + un 3eme pour l'interval
     Chaine=sys.argv[1]
     if Chaine.isdigit() :
-         x = int(Chaine)     
+         x = int(Chaine)
          print(Chaine,"Lancement de l'application correct (un seul argument)")
          # On rentre dans la boucle infinie
          firebase = firebase.FirebaseApplication(CompteFirebase,None)
