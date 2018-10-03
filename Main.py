@@ -23,6 +23,8 @@ Interval=10  # Temps en seconde entre chaque verification
 if len(sys.argv) != 4 :
 	print("Il n'y a pas assez de parametre. Exemple d'utilisation : Python Main.py PROD 1 60")
 	exit(0)
+
+print(sys.argv[1],sys.argv[2],sys.argv[3])
 ParamTypeLancement=sys.argv[1]
 if ParamTypeLancement!="PROD" or ParamTypeLancement!="TEST" :
 	print("Le premier parametre doit etre PROD pour un lancement avec boucle infinie ou TEST pour une seule iteration")
