@@ -26,7 +26,7 @@ if len(sys.argv) != 4 :
 
 print(sys.argv[1],sys.argv[2],sys.argv[3])
 ParamTypeLancement=sys.argv[1]
-if ParamTypeLancement!="PROD" or ParamTypeLancement!="TEST" :
+if ParamTypeLancement!="PROD" and ParamTypeLancement!="TEST" :
 	print("Le premier parametre doit etre PROD pour un lancement avec boucle infinie ou TEST pour une seule iteration")
 	exit(0)
 ParamNumSondeFB=sys.argv[2]
