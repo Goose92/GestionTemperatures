@@ -2,12 +2,13 @@
 Cette application permet de relever réguliement des températures via une sonde DALLAS sur un raspberry.
 
 Exemple de lancement de l'application :
-python Main.py PROD 1 60
-=> Cela lance le script en boucle infinie (prod), en utilisant la sonde 1 dans firebase avec un relevé toutes les 60 minutes.
-Il faut lancer le programme avec ces 3 paramètres :
+python Main.py PROD 1 60 SIMU
+=> Cela lance le script en boucle infinie (prod), en utilisant la sonde 1 dans firebase avec un relevé toutes les 60 minutes en simulant la sonde DALLAS
+Il faut lancer le programme avec ces 4 paramètres :
 1 : PROD ou Test
 2 : le numero de la sonde dans firebase
 3 : Le nombre de minutes entre chaque itération.
+4 : SIMU ou REEL
 
 Avant de lancer le programme, il faut configurer la RPI pour qu'elle puisse dialoguer avec la sonde
 # Via un sudo vi /etc/modules, Ajouter ceci dans le fichier /etc/modules :
